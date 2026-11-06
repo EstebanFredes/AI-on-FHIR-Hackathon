@@ -240,6 +240,23 @@ an automatic decision.
   identical calls are cached for the client's lifetime.
 - Suggestions are for review: the terminology server gives no clinical/coding advice.
 
+## Imaging terminologies
+ 
+Proposed CodeSystems and ValueSets for clinical imaging data, built from the RIS order CSV files. They are FHIR R4 resources, with status `draft` and version `0.1.0`.
+ 
+Base URL: `https://interoperabilidad.bupa.cl`
+ 
+### Resources
+ 
+| Type | Name (`id` / `name`) | Title | Canonical URL | File |
+| --- | --- | --- | --- | --- |
+| CodeSystem | `ExamenImagenCS` | Tipo de examen de imagenología (imaging exam type) | `https://interoperabilidad.bupa.cl/CodeSystem/ExamenImagenCS` | `CodeSystem-ExamenImagenCS.json` |
+| ValueSet | `ExamenImagenVS` | Tipo de examen de imagenología (imaging exam type) | `https://interoperabilidad.bupa.cl/ValueSet/ExamenImagenVS` | `ValueSet-ExamenImagenVS.json` |
+| CodeSystem | `ModalidadImagenCS` | Modalidad de imagenología (imaging modality) | `https://interoperabilidad.bupa.cl/CodeSystem/ModalidadImagenCS` | `CodeSystem-ModalidadImagenCS.json` |
+| ValueSet | `ModalidadImagenVS` | Modalidad de imagenología (imaging modality) | `https://interoperabilidad.bupa.cl/ValueSet/ModalidadImagenVS` | `ValueSet-ModalidadImagenVS.json` |
+ 
+Each ValueSet includes all the concepts of its CodeSystem.
+
 ## Notes
 
 - Default model is `claude-opus-5-5` (override with `ANTHROPIC_MODEL`).
@@ -248,3 +265,5 @@ an automatic decision.
 - The output is a readable JSON map, **not** a formal FHIR `StructureMap`
   resource — that compile step is open item 1 in the spec.
 - Synthetic data only; the agent never invents codes or columns to fill a gap.
+
+
