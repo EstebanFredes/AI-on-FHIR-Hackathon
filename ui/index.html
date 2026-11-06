@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Structure Map Agent — Workbench</title>
+  <meta name="description" content="Review, correct and accept proposed source→FHIR structure maps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app copilot-open" id="app">
+
+    <!-- Nav rail -->
+    <div class="rail">
+      <div class="brand"><span class="logo" aria-hidden="true"></span><span class="title">Structure Map Agent</span></div>
+      <nav id="railNav">
+        <a data-nav="sources"><span class="ico">⇪</span><span class="label">Sources</span></a>
+        <a data-nav="mappings" class="active"><span class="ico">⇄</span><span class="label">Mappings</span></a>
+        <a data-nav="guide"><span class="ico">▤</span><span class="label">Guide</span></a>
+        <a data-nav="settings"><span class="ico">⚙</span><span class="label">Settings</span></a>
+      </nav>
+      <div class="rail-foot">
+        <button class="rail-toggle" id="railToggle" title="collapse / expand">⇤</button>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <div class="header">
+        <div class="header-row">
+          <div class="breadcrumbs">
+            <span>Mappings</span><span class="sep">/</span>
+            <select id="entitySelect" aria-label="entity"></select>
+            <span class="sep">→</span>
+            <span class="mono" id="targetProfile"></span>
+          </div>
+          <div class="spacer"></div>
+          <span class="counter" id="counter"></span>
+          <button class="btn ghost small" id="copilotToggle" title="toggle copilot">Copilot</button>
+          <span id="overrideWrap" class="counter hidden"><label><input type="checkbox" id="overrideGaps"> override gaps</label></span>
+          <button class="btn primary" id="exportBtn">Export</button>
+        </div>
+        <div class="tabs">
+          <button class="tab" data-tab="source">Source</button>
+          <button class="tab active" data-tab="mapping">Mapping</button>
+          <button class="tab" data-tab="gaps">Gaps <span class="pill warn hidden" id="gapsPill"></span></button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="stage with-detail" id="stage"></div>
+      </div>
+    </div>
+
+    <!-- Copilot panel -->
+    <aside class="copilot">
+      <div class="c-head">
+        <span class="title">Copilot</span>
+        <span class="spacer"></span>
+        <button class="btn ghost small" id="copilotClose" title="close">✕</button>
+      </div>
+      <div class="c-log" id="copilotLog">
+        <div class="msg bot">I answer about a selected mapping, the guide, and the source — always with a citation.
+          <div class="suggests">
+            <button class="btn ghost small">Why this element?</button>
+            <button class="btn ghost small">What's required?</button>
+            <button class="btn ghost small">Show bindings</button>
+          </div>
+        </div>
+      </div>
+      <form class="c-input" id="copilotForm">
+        <input id="copilotInput" placeholder="Ask about a mapping, the guide, or the source…" autocomplete="off">
+        <button class="btn primary small" type="submit">Ask</button>
+      </form>
+    </aside>
+
+  </div>
+
+  <div class="toast" id="toast"><span class="dot"></span><span class="label"></span></div>
+
+  <script src="assets/sample-data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

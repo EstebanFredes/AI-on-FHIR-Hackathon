@@ -1,0 +1,10 @@
+# Shell scripts must stay LF: a CRLF shebang makes Linux/containers fail with
+# "cannot execute: required file not found" (exit 127). The Postgres initdb
+# hook and reset-db.sh run inside the postgres:18 container.
+*.sh text eol=lf
+
+# SQL loaded by psql inside the container — keep LF to avoid stray \r issues.
+*.sql text eol=lf
+
+# Shell helpers are executable
+db/initdb/*.sh text eol=lf
