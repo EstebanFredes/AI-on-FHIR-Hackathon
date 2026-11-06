@@ -1,0 +1,27 @@
+{
+  "_comment": "Copy to columns.json and set only the columns that fail to auto-resolve. Values are the actual header names in your CSVs.",
+  "campos": {
+    "profile": "perfil",
+    "element": "elemento",
+    "min": "min",
+    "max": "max",
+    "type": "tipo",
+    "binding": "valueset",
+    "binding_strength": "fuerza",
+    "fixed": "valor_fijo",
+    "must_support": "must_support",
+    "logical_model": "modelo_logico"
+  },
+  "modelos": {
+    "logical_model": "modelo",
+    "field": "campo",
+    "definition": "definicion",
+    "type": "tipo"
+  },
+  "terminologias": {
+    "valueset": "conjunto",
+    "code": "codigo",
+    "display": "display",
+    "system": "sistema"
+  }
+}

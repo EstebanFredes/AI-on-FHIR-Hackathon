@@ -1,0 +1,18 @@
+# Generated artifacts
+/data/*.db
+/data/*.json
+/data/*.html
+
+# Secrets
+.env
+
+# Guide CSVs (confidential — drop locally, don't commit)
+/guide/*.csv
+/guide/narrative/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
