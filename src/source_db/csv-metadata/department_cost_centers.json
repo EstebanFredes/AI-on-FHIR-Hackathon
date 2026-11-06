@@ -1,0 +1,230 @@
+{
+  "file": "department_cost_centers.csv",
+  "extracted_at": "2026-11-06T12:10:30+00:00",
+  "format": {
+    "encoding": "utf-8",
+    "delimiter": ";",
+    "line_ending": "LF",
+    "size_bytes": 806
+  },
+  "row_count": 11,
+  "column_count": 7,
+  "ragged_rows": {},
+  "candidate_primary_key": "dept_code",
+  "header_style": "lower_snake",
+  "columns": [
+    {
+      "position": 1,
+      "name": "dept_code",
+      "sql_name": "dept_code",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 11,
+      "unique": true,
+      "min_length": 2,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "value_shapes": {
+        "AAA": 3,
+        "AAA9": 2,
+        "A{5}": 2,
+        "AA": 1,
+        "A{6}": 1
+      },
+      "sample_values": [
+        "ED",
+        "ICU",
+        "MED4",
+        "MED5",
+        "FAMMED"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 2,
+      "name": "department_name",
+      "sql_name": "department_name",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 11,
+      "unique": true,
+      "min_length": 10,
+      "max_length": 29,
+      "inferred_type": "string",
+      "sql_type": "varchar(29)",
+      "value_shapes": {
+        "A{9} A{10}": 1,
+        "A{7} A{9} A{4} A{4}": 1,
+        "9 A{4} A{8} A{8}": 1,
+        "9 A{4} A{8} (A{6})": 1,
+        "A{6} A{8} A{6}": 1
+      },
+      "sample_values": [
+        "Emergency Department",
+        "Medical Intensive Care Unit",
+        "4 West Internal Medicine",
+        "5 East Medicine (closed)",
+        "Family Medicine Clinic"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 3,
+      "name": "cost_center",
+      "sql_name": "cost_center",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 11,
+      "unique": true,
+      "min_length": 7,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "semantic_hint": "cost_center",
+      "value_shapes": {
+        "AA-9{4}": 11
+      },
+      "sample_values": [
+        "CC-4100",
+        "CC-4310",
+        "CC-4420",
+        "CC-4430",
+        "CC-6105"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 4,
+      "name": "gl_unit",
+      "sql_name": "gl_unit",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 2,
+      "unique": false,
+      "min_length": 6,
+      "max_length": 6,
+      "inferred_type": "string",
+      "sql_type": "varchar(6)",
+      "value_shapes": {
+        "A{4}99": 11
+      },
+      "enum_values": {
+        "SEGH01": 7,
+        "SEGH02": 4
+      },
+      "sample_values": [
+        "SEGH01",
+        "SEGH02"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 5,
+      "name": "service_line",
+      "sql_name": "service_line",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 8,
+      "unique": false,
+      "min_length": 7,
+      "max_length": 18,
+      "inferred_type": "string",
+      "sql_type": "varchar(18)",
+      "value_shapes": {
+        "A{8}": 2,
+        "A{5} & A{8}": 2,
+        "A{10}": 2,
+        "A{9} A{8}": 1,
+        "A{8} A{4}": 1
+      },
+      "enum_values": {
+        "Medicine": 2,
+        "Women & Children": 2,
+        "Laboratory": 2,
+        "Emergency Services": 1,
+        "Critical Care": 1,
+        "Primary Care": 1,
+        "Musculoskeletal": 1,
+        "Imaging": 1
+      },
+      "sample_values": [
+        "Emergency Services",
+        "Critical Care",
+        "Medicine",
+        "Primary Care",
+        "Women & Children"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 6,
+      "name": "director",
+      "sql_name": "director",
+      "null_count": 1,
+      "nullable": true,
+      "distinct_count": 9,
+      "unique": false,
+      "min_length": 6,
+      "max_length": 10,
+      "inferred_type": "string",
+      "sql_type": "varchar(10)",
+      "semantic_hint": "person_initials",
+      "value_shapes": {
+        "A. A{7}": 3,
+        "A. A{6}": 2,
+        "A. A{5}": 2,
+        "A. A{4}": 2,
+        "A. AAA": 1
+      },
+      "enum_values": {
+        "H. Wong": 2,
+        "M. Lawson": 1,
+        "R. Haddad": 1,
+        "T. Bauer": 1,
+        "A. Patel": 1,
+        "C. Alvarez": 1,
+        "D. Kim": 1,
+        "E. Ivanova": 1,
+        "N. Okonkwo": 1
+      },
+      "sample_values": [
+        "M. Lawson",
+        "R. Haddad",
+        "T. Bauer",
+        "A. Patel",
+        "C. Alvarez"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 7,
+      "name": "active",
+      "sql_name": "active",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 2,
+      "unique": false,
+      "min_length": 1,
+      "max_length": 1,
+      "inferred_type": "boolean",
+      "sql_type": "boolean",
+      "true_false_tokens": [
+        "N",
+        "Y"
+      ],
+      "value_shapes": {
+        "A": 11
+      },
+      "enum_values": {
+        "Y": 10,
+        "N": 1
+      },
+      "sample_values": [
+        "Y",
+        "N"
+      ],
+      "has_untrimmed_whitespace": false
+    }
+  ]
+}

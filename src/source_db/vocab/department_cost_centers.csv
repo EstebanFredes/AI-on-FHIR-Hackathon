@@ -1,0 +1,12 @@
+dept_code;department_name;cost_center;gl_unit;service_line;director;active
+ED;Emergency Department;CC-4100;SEGH01;Emergency Services;M. Lawson;Y
+ICU;Medical Intensive Care Unit;CC-4310;SEGH01;Critical Care;R. Haddad;Y
+MED4;4 West Internal Medicine;CC-4420;SEGH01;Medicine;T. Bauer;Y
+MED5;5 East Medicine (closed);CC-4430;SEGH01;Medicine;;N
+FAMMED;Family Medicine Clinic;CC-6105;SEGH02;Primary Care;A. Patel;Y
+OBGYN;Women's Health Clinic;CC-6210;SEGH02;Women & Children;C. Alvarez;Y
+ORTHO;Orthopedics & Sports Medicine;CC-6330;SEGH02;Musculoskeletal;D. Kim;Y
+PEDS;Pediatrics;CC-6250;SEGH02;Women & Children;E. Ivanova;Y
+RAD;Diagnostic Imaging;CC-7200;SEGH01;Imaging;N. Okonkwo;Y
+LAB;Clinical Laboratory;CC-7100;SEGH01;Laboratory;H. Wong;Y
+LAB-REF;Reference Lab Send-outs;CC-7190;SEGH01;Laboratory;H. Wong;Y

@@ -1,0 +1,209 @@
+{
+  "file": "fammed_dx_favorites.csv",
+  "extracted_at": "2026-11-06T12:10:30+00:00",
+  "format": {
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "line_ending": "LF",
+    "size_bytes": 1570
+  },
+  "row_count": 27,
+  "column_count": 7,
+  "ragged_rows": {},
+  "candidate_primary_key": "Pick#",
+  "header_style": "free text",
+  "columns": [
+    {
+      "position": 1,
+      "name": "Pick#",
+      "sql_name": "pick_no",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 27,
+      "unique": true,
+      "min_length": 5,
+      "max_length": 5,
+      "inferred_type": "string",
+      "sql_type": "varchar(5)",
+      "value_shapes": {
+        "AA999": 27
+      },
+      "sample_values": [
+        "FM001",
+        "FM002",
+        "FM003",
+        "FM004",
+        "FM005"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 2,
+      "name": "Clinician Term",
+      "sql_name": "clinician_term",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 27,
+      "unique": true,
+      "min_length": 3,
+      "max_length": 35,
+      "inferred_type": "string",
+      "sql_type": "varchar(35)",
+      "value_shapes": {
+        "A{11}": 2,
+        "AAA": 2,
+        "A{10}": 2,
+        "A{8} A{4} 9": 1,
+        "A{8} A{4} 9 - A{12}": 1
+      },
+      "sample_values": [
+        "Diabetes type 2",
+        "Diabetes type 2 - uncontrolled",
+        "Prediabetes",
+        "Hypothyroid",
+        "Obesity"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 3,
+      "name": "ICD10",
+      "sql_name": "icd10",
+      "null_count": 1,
+      "nullable": true,
+      "distinct_count": 26,
+      "unique": true,
+      "min_length": 3,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "semantic_hint": "icd10cm",
+      "value_shapes": {
+        "A99.9": 13,
+        "A99.99": 8,
+        "A99": 2,
+        "A99.999": 2,
+        "A99.A": 1
+      },
+      "sample_values": [
+        "E11.9",
+        "E11.65",
+        "R73.03",
+        "E03.9",
+        "E66.9"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 4,
+      "name": "Category",
+      "sql_name": "category",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 10,
+      "unique": false,
+      "min_length": 2,
+      "max_length": 9,
+      "inferred_type": "string",
+      "sql_type": "varchar(9)",
+      "value_shapes": {
+        "A{9}": 5,
+        "A{4}": 5,
+        "AA": 4,
+        "A{5}": 4,
+        "A{8}": 4
+      },
+      "enum_values": {
+        "Endocrine": 5,
+        "Resp": 5,
+        "Wellness": 4,
+        "Cardio": 3,
+        "GI": 3,
+        "MSK": 2,
+        "Psych": 2,
+        "GU": 1,
+        "Neuro": 1,
+        "Other": 1
+      },
+      "sample_values": [
+        "Endocrine",
+        "Cardio",
+        "Resp",
+        "GU",
+        "MSK"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 5,
+      "name": "Added By",
+      "sql_name": "added_by",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 1,
+      "unique": false,
+      "min_length": 8,
+      "max_length": 8,
+      "inferred_type": "string",
+      "sql_type": "varchar(8)",
+      "semantic_hint": "person_initials",
+      "value_shapes": {
+        "A. A{5}": 27
+      },
+      "enum_values": {
+        "A. Patel": 27
+      },
+      "sample_values": [
+        "A. Patel"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 6,
+      "name": "Last Reviewed",
+      "sql_name": "last_reviewed",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 2,
+      "unique": false,
+      "min_length": 7,
+      "max_length": 7,
+      "inferred_type": "year_month",
+      "sql_type": "varchar(7)",
+      "date_format": "YYYY-MM",
+      "min": "2019-04",
+      "max": "2025-09",
+      "note": "year-month only; Postgres date rejects it - kept as text (to_date(col,'YYYY-MM') to convert)",
+      "value_shapes": {
+        "9{4}-99": 27
+      },
+      "sample_values": [
+        "2025-09",
+        "2019-04"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 7,
+      "name": "Comment",
+      "sql_name": "comment",
+      "null_count": 25,
+      "nullable": true,
+      "distinct_count": 2,
+      "unique": true,
+      "min_length": 46,
+      "max_length": 66,
+      "inferred_type": "string",
+      "sql_type": "varchar(66)",
+      "value_shapes": {
+        "AAA A{4} - AAA A{8} A{5} AA9{4}, A{6} A{8} -> AAA AA999": 1,
+        "AA A{4} - A{9} A{4} A{4} A{4} A{4} A{6}": 1
+      },
+      "sample_values": [
+        "OLD CODE - not billable since FY2022, claims rejected -> use FM041",
+        "No code - clinician must pick from full search"
+      ],
+      "has_untrimmed_whitespace": false
+    }
+  ]
+}

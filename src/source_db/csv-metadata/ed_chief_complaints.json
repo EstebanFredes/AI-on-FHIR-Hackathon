@@ -1,0 +1,209 @@
+{
+  "file": "ed_chief_complaints.csv",
+  "extracted_at": "2026-11-06T12:10:30+00:00",
+  "format": {
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "line_ending": "LF",
+    "size_bytes": 903
+  },
+  "row_count": 16,
+  "column_count": 7,
+  "ragged_rows": {},
+  "candidate_primary_key": "CC_CODE",
+  "header_style": "UPPER_SNAKE",
+  "columns": [
+    {
+      "position": 1,
+      "name": "CC_CODE",
+      "sql_name": "cc_code",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 16,
+      "unique": true,
+      "min_length": 5,
+      "max_length": 5,
+      "inferred_type": "string",
+      "sql_type": "varchar(5)",
+      "value_shapes": {
+        "AA999": 16
+      },
+      "sample_values": [
+        "CC001",
+        "CC002",
+        "CC003",
+        "CC004",
+        "CC005"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 2,
+      "name": "COMPLAINT",
+      "sql_name": "complaint",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 16,
+      "unique": true,
+      "min_length": 4,
+      "max_length": 28,
+      "inferred_type": "string",
+      "sql_type": "varchar(28)",
+      "value_shapes": {
+        "A{4} A{6}": 2,
+        "A{5} A{4}": 1,
+        "A{9} AA A{6}": 1,
+        "A{9} A{4}": 1,
+        "A{5}": 1
+      },
+      "sample_values": [
+        "Chest pain",
+        "Shortness of breath",
+        "Abdominal pain",
+        "Fever",
+        "Fever - pediatric (<18y)"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 3,
+      "name": "BODY_SYSTEM",
+      "sql_name": "body_system",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 13,
+      "unique": false,
+      "min_length": 2,
+      "max_length": 15,
+      "inferred_type": "string",
+      "sql_type": "varchar(15)",
+      "value_shapes": {
+        "A{5}": 3,
+        "A{14}": 2,
+        "AA": 2,
+        "A{7}": 2,
+        "A{6}": 2
+      },
+      "sample_values": [
+        "Cardiovascular",
+        "Respiratory",
+        "GI",
+        "General",
+        "ENT"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 4,
+      "name": "DEFAULT_ESI",
+      "sql_name": "default_esi",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 5,
+      "unique": false,
+      "min_length": 1,
+      "max_length": 1,
+      "inferred_type": "integer",
+      "sql_type": "integer",
+      "min": 1,
+      "max": 5,
+      "value_shapes": {
+        "9": 16
+      },
+      "sample_values": [
+        "2",
+        "3",
+        "4",
+        "1",
+        "5"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 5,
+      "name": "TRIAGE_PROTOCOL",
+      "sql_name": "triage_protocol",
+      "null_count": 7,
+      "nullable": true,
+      "distinct_count": 9,
+      "unique": true,
+      "min_length": 12,
+      "max_length": 44,
+      "inferred_type": "string",
+      "sql_type": "varchar(44)",
+      "value_shapes": {
+        "AAA A{7} - AAA A{6} 99 AAA": 1,
+        "A{4} A{5} A{8}": 1,
+        "A{5} A{5} A{8} A{5}": 1,
+        "A{13} A{5} - AA A{4} AA AA A{8}": 1,
+        "A{8} AA A{4} A{4}": 1
+      },
+      "sample_values": [
+        "ACS pathway - ECG within 10 min",
+        "Peds fever protocol",
+        "Rapid strep standing order",
+        "Anticoagulant check - CT head if on anticoag",
+        "Canadian CT head rule"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 6,
+      "name": "SEPSIS_SCREEN",
+      "sql_name": "sepsis_screen",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 2,
+      "unique": false,
+      "min_length": 1,
+      "max_length": 1,
+      "inferred_type": "boolean",
+      "sql_type": "boolean",
+      "true_false_tokens": [
+        "N",
+        "Y"
+      ],
+      "value_shapes": {
+        "A": 16
+      },
+      "enum_values": {
+        "N": 10,
+        "Y": 6
+      },
+      "sample_values": [
+        "N",
+        "Y"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 7,
+      "name": "STROKE_ALERT",
+      "sql_name": "stroke_alert",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 2,
+      "unique": false,
+      "min_length": 1,
+      "max_length": 1,
+      "inferred_type": "boolean",
+      "sql_type": "boolean",
+      "true_false_tokens": [
+        "N",
+        "Y"
+      ],
+      "value_shapes": {
+        "A": 16
+      },
+      "enum_values": {
+        "N": 14,
+        "Y": 2
+      },
+      "sample_values": [
+        "N",
+        "Y"
+      ],
+      "has_untrimmed_whitespace": false
+    }
+  ]
+}

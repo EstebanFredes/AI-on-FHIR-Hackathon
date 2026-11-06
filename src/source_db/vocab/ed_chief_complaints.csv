@@ -1,0 +1,17 @@
+CC_CODE,COMPLAINT,BODY_SYSTEM,DEFAULT_ESI,TRIAGE_PROTOCOL,SEPSIS_SCREEN,STROKE_ALERT
+CC001,Chest pain,Cardiovascular,2,ACS pathway - ECG within 10 min,N,N
+CC002,Shortness of breath,Respiratory,2,,Y,N
+CC003,Abdominal pain,GI,3,,Y,N
+CC004,Fever,General,3,,Y,N
+CC005,Fever - pediatric (<18y),General,3,Peds fever protocol,Y,N
+CC006,Sore throat,ENT,4,Rapid strep standing order,N,N
+CC007,Fall,Injury,3,Anticoagulant check - CT head if on anticoag,N,N
+CC008,Head injury,Injury,2,Canadian CT head rule,N,N
+CC009,Weakness / numbness one side,Neuro,1,STROKE ALERT - call 5555,N,Y
+CC010,Altered mental status,Neuro,2,,Y,Y
+CC011,Dysuria / urinary symptoms,GU,4,UA standing order,Y,N
+CC012,Extremity injury,Musculoskeletal,4,Ottawa rules,N,N
+CC013,Laceration,Skin,4,,N,N
+CC014,Psychiatric evaluation,Behavioral,3,Safety search,N,N
+CC015,Medication refill,Administrative,5,,N,N
+CC099,Other (free text),Other,3,,N,N

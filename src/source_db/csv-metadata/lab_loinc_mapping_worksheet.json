@@ -1,0 +1,323 @@
+{
+  "file": "lab_loinc_mapping_worksheet.csv",
+  "extracted_at": "2026-11-06T12:10:30+00:00",
+  "format": {
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "line_ending": "LF",
+    "size_bytes": 2809
+  },
+  "row_count": 21,
+  "column_count": 10,
+  "ragged_rows": {},
+  "candidate_primary_key": "Local Code",
+  "header_style": "free text",
+  "columns": [
+    {
+      "position": 1,
+      "name": "Local Code",
+      "sql_name": "local_code",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 21,
+      "unique": true,
+      "min_length": 1,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "value_shapes": {
+        "AAA": 10,
+        "A{4}": 4,
+        "AA": 2,
+        "A{6}": 2,
+        "A": 1
+      },
+      "sample_values": [
+        "WBC",
+        "RBC",
+        "HGB",
+        "HCT",
+        "MCV"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 2,
+      "name": "Local Test Name",
+      "sql_name": "local_test_name",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 21,
+      "unique": true,
+      "min_length": 6,
+      "max_length": 28,
+      "inferred_type": "string",
+      "sql_type": "varchar(28)",
+      "value_shapes": {
+        "A{10}": 3,
+        "A{9}": 2,
+        "A{5} A{5} A{4} A{5}": 1,
+        "AAA A{5} A{4} A{5}": 1,
+        "A{4} A{11} A{6}": 1
+      },
+      "sample_values": [
+        "White blood cell count",
+        "Red blood cell count",
+        "Hemoglobin",
+        "Hematocrit",
+        "Mean corpuscular volume"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 3,
+      "name": "Specimen",
+      "sql_name": "specimen",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 6,
+      "unique": false,
+      "min_length": 2,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "value_shapes": {
+        "AAA": 12,
+        "A{4}": 7,
+        "AA": 1,
+        "A{7}": 1
+      },
+      "enum_values": {
+        "SST": 10,
+        "EDTA": 7,
+        "NAF": 1,
+        "CIT": 1,
+        "UR": 1,
+        "VARIOUS": 1
+      },
+      "sample_values": [
+        "EDTA",
+        "SST",
+        "NAF",
+        "CIT",
+        "UR"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 4,
+      "name": "Units",
+      "sql_name": "units",
+      "null_count": 3,
+      "nullable": true,
+      "distinct_count": 11,
+      "unique": false,
+      "min_length": 1,
+      "max_length": 13,
+      "inferred_type": "string",
+      "sql_type": "varchar(13)",
+      "value_shapes": {
+        "AA/AA": 6,
+        "A99A9/AA": 3,
+        "A{4}/A": 3,
+        "A/AA": 1,
+        "%": 1
+      },
+      "enum_values": {
+        "mmol/L": 3,
+        "mg/dL": 3,
+        "ng/mL": 3,
+        "x10E3/uL": 2,
+        "x10E6/uL": 1,
+        "g/dL": 1,
+        "%": 1,
+        "fL": 1,
+        "ng/L": 1,
+        "{INR}": 1,
+        "mL/min/1.73m2": 1
+      },
+      "sample_values": [
+        "x10E3/uL",
+        "x10E6/uL",
+        "g/dL",
+        "%",
+        "fL"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 5,
+      "name": "LOINC",
+      "sql_name": "loinc",
+      "null_count": 3,
+      "nullable": true,
+      "distinct_count": 18,
+      "unique": true,
+      "min_length": 5,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "semantic_hint": "loinc",
+      "value_shapes": {
+        "9{4}-9": 9,
+        "999-9": 5,
+        "9{5}-9": 4
+      },
+      "sample_values": [
+        "6690-2",
+        "789-8",
+        "718-7",
+        "4544-3",
+        "787-2"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 6,
+      "name": "LOINC Long Name",
+      "sql_name": "loinc_long_name",
+      "null_count": 3,
+      "nullable": true,
+      "distinct_count": 18,
+      "unique": true,
+      "min_length": 33,
+      "max_length": 78,
+      "inferred_type": "string",
+      "sql_type": "varchar(78)",
+      "value_shapes": {
+        "A{10} [#/A{6}] AA A{5} AA A{9} A{5}": 1,
+        "A{12} [#/A{6}] AA A{5} AA A{9} A{5}": 1,
+        "A{10} [A{4}/A{6}] AA A{5}": 1,
+        "A{10} [A{6} A{8}] AA A{5} AA A{9} A{5}": 1,
+        "AAA [A{7} A{4} A{6}] AA AAA A{5} A{5} AA A{9} A{5}": 1
+      },
+      "sample_values": [
+        "Leukocytes [#/volume] in Blood by Automated count",
+        "Erythrocytes [#/volume] in Blood by Automated count",
+        "Hemoglobin [Mass/volume] in Blood",
+        "Hematocrit [Volume Fraction] of Blood by Automated count",
+        "MCV [Entitic mean volume] in Red Blood Cells by Automated count"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 7,
+      "name": "Map Status",
+      "sql_name": "map_status",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 5,
+      "unique": false,
+      "min_length": 6,
+      "max_length": 12,
+      "inferred_type": "string",
+      "sql_type": "varchar(12)",
+      "value_shapes": {
+        "A{6}": 13,
+        "A{8}": 4,
+        "AA A{5}": 2,
+        "A{5} A{6}": 1,
+        "AAA A{7}": 1
+      },
+      "enum_values": {
+        "Mapped": 13,
+        "Proposed": 4,
+        "No Match": 2,
+        "Needs Review": 1,
+        "Not Started": 1
+      },
+      "sample_values": [
+        "Mapped",
+        "Proposed",
+        "Needs Review",
+        "No Match",
+        "Not Started"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 8,
+      "name": "Mapped By",
+      "sql_name": "mapped_by",
+      "null_count": 3,
+      "nullable": true,
+      "distinct_count": 3,
+      "unique": false,
+      "min_length": 7,
+      "max_length": 10,
+      "inferred_type": "string",
+      "sql_type": "varchar(10)",
+      "semantic_hint": "person_initials",
+      "value_shapes": {
+        "A. A{7}": 11,
+        "A. A{4}": 7
+      },
+      "enum_values": {
+        "D. Morales": 11,
+        "K. Osei": 4,
+        "H. Wong": 3
+      },
+      "sample_values": [
+        "D. Morales",
+        "H. Wong",
+        "K. Osei"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 9,
+      "name": "Map Date",
+      "sql_name": "map_date",
+      "null_count": 3,
+      "nullable": true,
+      "distinct_count": 4,
+      "unique": false,
+      "min_length": 10,
+      "max_length": 10,
+      "inferred_type": "date",
+      "sql_type": "date",
+      "date_format": "MM/DD/YYYY",
+      "min": "03/12/2019",
+      "max": "10/28/2026",
+      "note": "US date order; loads as date only with DateStyle MDY (Postgres default)",
+      "value_shapes": {
+        "99/99/9{4}": 18
+      },
+      "sample_values": [
+        "03/12/2019",
+        "02/01/2023",
+        "10/28/2026",
+        "05/02/2021"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 10,
+      "name": "Notes",
+      "sql_name": "notes",
+      "null_count": 11,
+      "nullable": true,
+      "distinct_count": 10,
+      "unique": true,
+      "min_length": 24,
+      "max_length": 68,
+      "inferred_type": "string",
+      "sql_type": "varchar(68)",
+      "value_shapes": {
+        "A{8} A{12} A{4} (AAA A{4} AAA)": 1,
+        "A{7} AA AAA AAA AA A{7} A{6} (AA-AA/AA AA A{11})": 1,
+        "AAA A{4} AA-A{4} AAA 9{4}": 1,
+        "A{6} A{6} A{4} A{11} - A{8} 9{5}-9 (A{6}-A{8})?": 1,
+        "A{6} A{9} A{7}": 1
+      },
+      "sample_values": [
+        "Replaced conventional cTnI (old code TNI)",
+        "Waiting on ref lab to confirm method (LC-MS/MS vs immunoassay)",
+        "New test go-live Dec 2026",
+        "Vendor insert says immunoassay - consider 20567-4 (method-specific)?",
+        "Sepsis committee request"
+      ],
+      "has_untrimmed_whitespace": false
+    }
+  ]
+}

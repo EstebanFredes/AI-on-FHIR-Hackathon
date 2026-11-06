@@ -1,0 +1,16 @@
+OLD_LIS_CODE,OLD_NAME,NEW_LIS_CODE,CONVERSION_RULE,RESULTS_MIGRATED,NOTES
+1010,CBC W/O DIFF,CBC,1:1,Y,
+1011,CBC W/ AUTO DIFF,CBC,1:1,Y,Diff components not migrated
+2001,LYTES,BMP,PARTIAL,Y,"Old lytes panel had NA/K/CL/CO2 only, mapped into BMP components"
+2002,CHEM7,BMP,1:1,Y,
+2050,LIPID PROFILE,LIPID,1:1,Y,
+2051,LDL DIRECT,LDLC,REVIEW,N,Direct vs calculated LDL - NOT the same analyte; results not migrated
+2100,LFT,HEPF,1:1,Y,
+3005,GLYCO HGB,HBA1C,1:1,Y,Method changed (immunoassay -> HPLC) 2019
+3010,TSH 3RD GEN,TSH,1:1,Y,
+3300,TNI,,RETIRED,Y,Conventional troponin I; replaced by TROPHS in 2023 (different reference range)
+4001,UA CHEM,UA,1:1,Y,
+5001,BLD CX,BCX,1:1,Y,
+5002,BLD CX PEDS,BCX,N:1,Y,Merged into single code; bottle type now on specimen
+5100,STREP SCREEN,STREPA,1:1,Y,
+9999,MISC,MISC-SO,1:1,N,

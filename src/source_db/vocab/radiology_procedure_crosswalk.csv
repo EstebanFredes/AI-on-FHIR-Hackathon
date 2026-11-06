@@ -1,0 +1,11 @@
+RIS Code,Procedure Description,Modality,CPT,CPT Modifier,LOINC (current),LOINC (proposed),LOINC Display,CDM Charge Code,Exam Duration (min),Prep Instructions,Owner Comments
+XRCH2V,XR CHEST PA AND LATERAL,DX,71046,,36643-5,,XR Chest 2 Views,320104611,10,None,
+XRCHPORT,XR CHEST 1 VIEW PORTABLE,DX,71045,,,36589-0,Portable XR Chest AP single view,320104603,10,None,Need playbook review - most are AP
+CTHDWO,CT HEAD/BRAIN WITHOUT CONTRAST,CT,70450,,30799-1,,CT Head WO contrast,350100450,15,None,
+CTACHPE,CTA CHEST PULMONARY EMBOLISM PROTOCOL,CT,71275,,,36266-5,CTA Chest vessels W contrast IV,350171275,20,"Creatinine within 30 days if >60 yo or diabetic; 20G IV R AC",No PE-specific LOINC - closest generic
+CTAPW,CT ABDOMEN PELVIS WITH CONTRAST,CT,74177,,,36813-4,CT Abdomen and Pelvis W contrast IV,350174177,20,"NPO 4h; oral contrast 90 min prior per protocol",
+MRKNWO,MRI KNEE WITHOUT CONTRAST,MR,73721,RT/LT,,30691-0,MR Knee WO contrast,610173721,40,MRI safety screening form,Laterality-specific codes exist (36510-6 right / 36508-0 left) - pick at order time?
+USABDLTD,US ABDOMEN LIMITED (RUQ),US,76705,,,30704-1,US Abdomen limited,402176705,30,NPO 6h,
+USOB2T,US OB >=14 WKS SINGLE GESTATION ANATOMY,US,76805,,,,,402176805,45,Full bladder not required,No good LOINC found - ask RSNA playbook team
+MGSCRBI,MAMMO SCREENING BILATERAL W TOMO,MG,77067,,24606-6,72142-3,DBT Breast - bilateral screening,403177067,20,No deodorant/powder,Current code is generic MG Breast Screening; proposed is tomo-specific
+MGSCRBI-OLD,MAMMO SCREENING BILATERAL (2D),MG,77067,,24606-6,26175-0,MG Breast - bilateral Screening,403177060,15,No deodorant/powder,INACTIVE since tomo go-live 2021

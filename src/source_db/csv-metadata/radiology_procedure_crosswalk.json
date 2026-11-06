@@ -1,0 +1,358 @@
+{
+  "file": "radiology_procedure_crosswalk.csv",
+  "extracted_at": "2026-11-06T12:10:30+00:00",
+  "format": {
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "line_ending": "LF",
+    "size_bytes": 1672
+  },
+  "row_count": 10,
+  "column_count": 12,
+  "ragged_rows": {},
+  "candidate_primary_key": "RIS Code",
+  "header_style": "free text",
+  "columns": [
+    {
+      "position": 1,
+      "name": "RIS Code",
+      "sql_name": "ris_code",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 10,
+      "unique": true,
+      "min_length": 5,
+      "max_length": 11,
+      "inferred_type": "string",
+      "sql_type": "varchar(11)",
+      "value_shapes": {
+        "A{4}9A": 2,
+        "A{8}": 2,
+        "A{6}": 2,
+        "A{7}": 2,
+        "A{5}": 1
+      },
+      "sample_values": [
+        "XRCH2V",
+        "XRCHPORT",
+        "CTHDWO",
+        "CTACHPE",
+        "CTAPW"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 2,
+      "name": "Procedure Description",
+      "sql_name": "procedure_description",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 10,
+      "unique": true,
+      "min_length": 23,
+      "max_length": 39,
+      "inferred_type": "string",
+      "sql_type": "varchar(39)",
+      "value_shapes": {
+        "AA A{5} AA AAA A{7}": 1,
+        "AA A{5} 9 A{4} A{8}": 1,
+        "AA A{4}/A{5} A{7} A{8}": 1,
+        "AAA A{5} A{9} A{8} A{8}": 1,
+        "AA A{7} A{6} A{4} A{8}": 1
+      },
+      "sample_values": [
+        "XR CHEST PA AND LATERAL",
+        "XR CHEST 1 VIEW PORTABLE",
+        "CT HEAD/BRAIN WITHOUT CONTRAST",
+        "CTA CHEST PULMONARY EMBOLISM PROTOCOL",
+        "CT ABDOMEN PELVIS WITH CONTRAST"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 3,
+      "name": "Modality",
+      "sql_name": "modality",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 5,
+      "unique": false,
+      "min_length": 2,
+      "max_length": 2,
+      "inferred_type": "string",
+      "sql_type": "varchar(2)",
+      "value_shapes": {
+        "AA": 10
+      },
+      "enum_values": {
+        "CT": 3,
+        "DX": 2,
+        "US": 2,
+        "MG": 2,
+        "MR": 1
+      },
+      "sample_values": [
+        "DX",
+        "CT",
+        "MR",
+        "US",
+        "MG"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 4,
+      "name": "CPT",
+      "sql_name": "cpt",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 9,
+      "unique": false,
+      "min_length": 5,
+      "max_length": 5,
+      "inferred_type": "code",
+      "sql_type": "varchar(5)",
+      "note": "numeric-looking identifier kept as text",
+      "semantic_hint": "cpt_hcpcs",
+      "value_shapes": {
+        "9{5}": 10
+      },
+      "enum_values": {
+        "77067": 2,
+        "71046": 1,
+        "71045": 1,
+        "70450": 1,
+        "71275": 1,
+        "74177": 1,
+        "73721": 1,
+        "76705": 1,
+        "76805": 1
+      },
+      "sample_values": [
+        "71046",
+        "71045",
+        "70450",
+        "71275",
+        "74177"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 5,
+      "name": "CPT Modifier",
+      "sql_name": "cpt_modifier",
+      "null_count": 9,
+      "nullable": true,
+      "distinct_count": 1,
+      "unique": true,
+      "min_length": 5,
+      "max_length": 5,
+      "inferred_type": "string",
+      "sql_type": "varchar(5)",
+      "value_shapes": {
+        "AA/AA": 1
+      },
+      "sample_values": [
+        "RT/LT"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 6,
+      "name": "LOINC (current)",
+      "sql_name": "loinc_current",
+      "null_count": 6,
+      "nullable": true,
+      "distinct_count": 3,
+      "unique": false,
+      "min_length": 7,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "semantic_hint": "loinc",
+      "value_shapes": {
+        "9{5}-9": 4
+      },
+      "enum_values": {
+        "24606-6": 2,
+        "36643-5": 1,
+        "30799-1": 1
+      },
+      "sample_values": [
+        "36643-5",
+        "30799-1",
+        "24606-6"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 7,
+      "name": "LOINC (proposed)",
+      "sql_name": "loinc_proposed",
+      "null_count": 3,
+      "nullable": true,
+      "distinct_count": 7,
+      "unique": true,
+      "min_length": 7,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "semantic_hint": "loinc",
+      "value_shapes": {
+        "9{5}-9": 7
+      },
+      "sample_values": [
+        "36589-0",
+        "36266-5",
+        "36813-4",
+        "30691-0",
+        "30704-1"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 8,
+      "name": "LOINC Display",
+      "sql_name": "loinc_display",
+      "null_count": 1,
+      "nullable": true,
+      "distinct_count": 9,
+      "unique": true,
+      "min_length": 16,
+      "max_length": 35,
+      "inferred_type": "string",
+      "sql_type": "varchar(35)",
+      "value_shapes": {
+        "AA A{4} AA A{8}": 2,
+        "AA A{5} 9 A{5}": 1,
+        "A{8} AA A{5} AA A{6} A{4}": 1,
+        "AAA A{5} A{7} A A{8} AA": 1,
+        "AA A{7} AAA A{6} A A{8} AA": 1
+      },
+      "sample_values": [
+        "XR Chest 2 Views",
+        "Portable XR Chest AP single view",
+        "CT Head WO contrast",
+        "CTA Chest vessels W contrast IV",
+        "CT Abdomen and Pelvis W contrast IV"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 9,
+      "name": "CDM Charge Code",
+      "sql_name": "cdm_charge_code",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 10,
+      "unique": true,
+      "min_length": 9,
+      "max_length": 9,
+      "inferred_type": "code",
+      "sql_type": "varchar(9)",
+      "note": "numeric-looking identifier kept as text",
+      "value_shapes": {
+        "9{9}": 10
+      },
+      "sample_values": [
+        "320104611",
+        "320104603",
+        "350100450",
+        "350171275",
+        "350174177"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 10,
+      "name": "Exam Duration (min)",
+      "sql_name": "exam_duration_min",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 6,
+      "unique": false,
+      "min_length": 2,
+      "max_length": 2,
+      "inferred_type": "integer",
+      "sql_type": "integer",
+      "min": 10,
+      "max": 45,
+      "value_shapes": {
+        "99": 10
+      },
+      "sample_values": [
+        "10",
+        "15",
+        "20",
+        "40",
+        "30"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 11,
+      "name": "Prep Instructions",
+      "sql_name": "prep_instructions",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 7,
+      "unique": false,
+      "min_length": 4,
+      "max_length": 60,
+      "inferred_type": "string",
+      "sql_type": "varchar(60)",
+      "value_shapes": {
+        "A{4}": 3,
+        "AA A{9}/A{6}": 2,
+        "A{10} A{6} 99 A{4} AA >99 AA AA A{8}; 99A AA A AA": 1,
+        "AAA 9A; A{4} A{8} 99 AAA A{5} AAA A{8}": 1,
+        "AAA A{6} A{9} A{4}": 1
+      },
+      "enum_values": {
+        "None": 3,
+        "No deodorant/powder": 2,
+        "Creatinine within 30 days if >60 yo or diabetic; 20G IV R AC": 1,
+        "NPO 4h; oral contrast 90 min prior per protocol": 1,
+        "MRI safety screening form": 1,
+        "NPO 6h": 1,
+        "Full bladder not required": 1
+      },
+      "sample_values": [
+        "None",
+        "Creatinine within 30 days if >60 yo or diabetic; 20G IV R AC",
+        "NPO 4h; oral contrast 90 min prior per protocol",
+        "MRI safety screening form",
+        "NPO 6h"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 12,
+      "name": "Owner Comments",
+      "sql_name": "owner_comments",
+      "null_count": 4,
+      "nullable": true,
+      "distinct_count": 6,
+      "unique": true,
+      "min_length": 32,
+      "max_length": 84,
+      "inferred_type": "string",
+      "sql_type": "varchar(84)",
+      "value_shapes": {
+        "A{4} A{8} A{6} - A{4} AAA AA": 1,
+        "AA AA-A{8} A{5} - A{7} A{7}": 1,
+        "A{10}-A{8} A{5} A{5} (9{5}-9 A{5} / 9{5}-9 A{4}) - A{4} AA A{5} A{4}?": 1,
+        "AA A{4} A{5} A{5} - AAA A{4} A{8} A{4}": 1,
+        "A{7} A{4} AA A{7} AA A{6} A{9}; A{8} AA A{4}-A{8}": 1
+      },
+      "sample_values": [
+        "Need playbook review - most are AP",
+        "No PE-specific LOINC - closest generic",
+        "Laterality-specific codes exist (36510-6 right / 36508-0 left) - pick at order time?",
+        "No good LOINC found - ask RSNA playbook team",
+        "Current code is generic MG Breast Screening; proposed is tomo-specific"
+      ],
+      "has_untrimmed_whitespace": false
+    }
+  ]
+}

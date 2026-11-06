@@ -1,0 +1,202 @@
+{
+  "file": "legacy_lis_code_conversion_2019.csv",
+  "extracted_at": "2026-11-06T12:10:30+00:00",
+  "format": {
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "line_ending": "LF",
+    "size_bytes": 811
+  },
+  "row_count": 15,
+  "column_count": 6,
+  "ragged_rows": {},
+  "candidate_primary_key": "OLD_LIS_CODE",
+  "header_style": "UPPER_SNAKE",
+  "columns": [
+    {
+      "position": 1,
+      "name": "OLD_LIS_CODE",
+      "sql_name": "old_lis_code",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 15,
+      "unique": true,
+      "min_length": 4,
+      "max_length": 4,
+      "inferred_type": "code",
+      "sql_type": "varchar(4)",
+      "note": "numeric-looking identifier kept as text",
+      "value_shapes": {
+        "9{4}": 15
+      },
+      "sample_values": [
+        "1010",
+        "1011",
+        "2001",
+        "2002",
+        "2050"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 2,
+      "name": "OLD_NAME",
+      "sql_name": "old_name",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 15,
+      "unique": true,
+      "min_length": 3,
+      "max_length": 16,
+      "inferred_type": "string",
+      "sql_type": "varchar(16)",
+      "value_shapes": {
+        "AAA": 2,
+        "AAA A/A A{4}": 1,
+        "AAA A/ A{4} A{4}": 1,
+        "A{5}": 1,
+        "A{4}9": 1
+      },
+      "sample_values": [
+        "CBC W/O DIFF",
+        "CBC W/ AUTO DIFF",
+        "LYTES",
+        "CHEM7",
+        "LIPID PROFILE"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 3,
+      "name": "NEW_LIS_CODE",
+      "sql_name": "new_lis_code",
+      "null_count": 1,
+      "nullable": true,
+      "distinct_count": 11,
+      "unique": false,
+      "min_length": 2,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "value_shapes": {
+        "AAA": 7,
+        "A{4}": 2,
+        "A{5}": 1,
+        "AAA9A": 1,
+        "AA": 1
+      },
+      "enum_values": {
+        "CBC": 2,
+        "BMP": 2,
+        "BCX": 2,
+        "LIPID": 1,
+        "LDLC": 1,
+        "HEPF": 1,
+        "HBA1C": 1,
+        "TSH": 1,
+        "UA": 1,
+        "STREPA": 1,
+        "MISC-SO": 1
+      },
+      "sample_values": [
+        "CBC",
+        "BMP",
+        "LIPID",
+        "LDLC",
+        "HEPF"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 4,
+      "name": "CONVERSION_RULE",
+      "sql_name": "conversion_rule",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 5,
+      "unique": false,
+      "min_length": 3,
+      "max_length": 7,
+      "inferred_type": "string",
+      "sql_type": "varchar(7)",
+      "value_shapes": {
+        "9:9": 11,
+        "A{7}": 2,
+        "A{6}": 1,
+        "A:9": 1
+      },
+      "enum_values": {
+        "1:1": 11,
+        "PARTIAL": 1,
+        "REVIEW": 1,
+        "RETIRED": 1,
+        "N:1": 1
+      },
+      "sample_values": [
+        "1:1",
+        "PARTIAL",
+        "REVIEW",
+        "RETIRED",
+        "N:1"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 5,
+      "name": "RESULTS_MIGRATED",
+      "sql_name": "results_migrated",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 2,
+      "unique": false,
+      "min_length": 1,
+      "max_length": 1,
+      "inferred_type": "boolean",
+      "sql_type": "boolean",
+      "true_false_tokens": [
+        "N",
+        "Y"
+      ],
+      "value_shapes": {
+        "A": 15
+      },
+      "enum_values": {
+        "Y": 13,
+        "N": 2
+      },
+      "sample_values": [
+        "Y",
+        "N"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 6,
+      "name": "NOTES",
+      "sql_name": "notes",
+      "null_count": 9,
+      "nullable": true,
+      "distinct_count": 6,
+      "unique": true,
+      "min_length": 28,
+      "max_length": 79,
+      "inferred_type": "string",
+      "sql_type": "varchar(79)",
+      "value_shapes": {
+        "A{4} A{10} AAA A{8}": 1,
+        "AAA A{5} A{5} AAA AA/A/AA/AA9 A{4}, A{6} A{4} AAA A{10}": 1,
+        "A{6} AA A{10} AAA - AAA AAA A{4} A{7}; A{7} AAA A{8}": 1,
+        "A{6} A{7} (A{11} -> A{4}) 9{4}": 1,
+        "A{12} A{8} A; A{8} AA A{6} AA 9{4} (A{9} A{9} A{5})": 1
+      },
+      "sample_values": [
+        "Diff components not migrated",
+        "Old lytes panel had NA/K/CL/CO2 only, mapped into BMP components",
+        "Direct vs calculated LDL - NOT the same analyte; results not migrated",
+        "Method changed (immunoassay -> HPLC) 2019",
+        "Conventional troponin I; replaced by TROPHS in 2023 (different reference range)"
+      ],
+      "has_untrimmed_whitespace": false
+    }
+  ]
+}

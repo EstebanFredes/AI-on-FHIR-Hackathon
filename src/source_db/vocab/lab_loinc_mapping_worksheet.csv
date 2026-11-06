@@ -1,0 +1,22 @@
+Local Code,Local Test Name,Specimen,Units,LOINC,LOINC Long Name,Map Status,Mapped By,Map Date,Notes
+WBC,White blood cell count,EDTA,x10E3/uL,6690-2,Leukocytes [#/volume] in Blood by Automated count,Mapped,D. Morales,03/12/2019,
+RBC,Red blood cell count,EDTA,x10E6/uL,789-8,Erythrocytes [#/volume] in Blood by Automated count,Mapped,D. Morales,03/12/2019,
+HGB,Hemoglobin,EDTA,g/dL,718-7,Hemoglobin [Mass/volume] in Blood,Mapped,D. Morales,03/12/2019,
+HCT,Hematocrit,EDTA,%,4544-3,Hematocrit [Volume Fraction] of Blood by Automated count,Mapped,D. Morales,03/12/2019,
+MCV,Mean corpuscular volume,EDTA,fL,787-2,MCV [Entitic mean volume] in Red Blood Cells by Automated count,Mapped,D. Morales,03/12/2019,
+PLT,Platelet count,EDTA,x10E3/uL,777-3,Platelets [#/volume] in Blood by Automated count,Mapped,D. Morales,03/12/2019,
+NA,Sodium,SST,mmol/L,2951-2,Sodium [Moles/volume] in Serum or Plasma,Mapped,D. Morales,03/12/2019,
+K,Potassium,SST,mmol/L,2823-3,Potassium [Moles/volume] in Serum or Plasma,Mapped,D. Morales,03/12/2019,
+CREA,Creatinine,SST,mg/dL,2160-0,Creatinine [Mass/volume] in Serum or Plasma,Mapped,D. Morales,03/12/2019,
+GLU,Glucose,SST,mg/dL,2345-7,Glucose [Mass/volume] in Serum or Plasma,Mapped,D. Morales,03/12/2019,
+TROPHS,"Troponin I, high sensitivity",SST,ng/L,89579-7,Troponin I.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method,Mapped,H. Wong,02/01/2023,Replaced conventional cTnI (old code TNI)
+LACT,Lactic acid,NAF,mmol/L,2524-7,Lactate [Moles/volume] in Serum or Plasma,Mapped,D. Morales,03/12/2019,
+SO-VITD,Vitamin D 25-OH (send out),SST,ng/mL,62292-8,25-Hydroxyvitamin D3+25-Hydroxyvitamin D2 [Mass/volume] in Serum or Plasma,Proposed,K. Osei,10/28/2026,Waiting on ref lab to confirm method (LC-MS/MS vs immunoassay)
+MG,Magnesium,SST,mg/dL,19123-9,Magnesium [Mass/volume] in Serum or Plasma,Proposed,K. Osei,10/28/2026,New test go-live Dec 2026
+FERR,Ferritin,SST,ng/mL,2276-4,Ferritin [Mass/volume] in Serum or Plasma,Needs Review,K. Osei,10/28/2026,Vendor insert says immunoassay - consider 20567-4 (method-specific)?
+PCT,Procalcitonin,SST,ng/mL,33959-8,Procalcitonin [Mass/volume] in Serum or Plasma,Proposed,,,Sepsis committee request
+INR,Prothrombin time INR,CIT,{INR},6301-6,INR in Platelet poor plasma by Coagulation assay,Proposed,,,Coag analyzer not in LIS interface yet
+UCX,Urine culture,UR,,630-4,Bacteria identified in Urine by Culture,Mapped,K. Osei,05/02/2021,Not yet built in catalog - orders go to reference lab
+BBHOLD,Blood bank hold tube,EDTA,,,,No Match,H. Wong,03/12/2019,Workflow-only orderable; no result - do not send to HIE
+MISC-SO,Miscellaneous send out,VARIOUS,,,,No Match,H. Wong,03/12/2019,Free-text test name in order comment
+eGFR,eGFR CKD-EPI 2021 (calc),SST,mL/min/1.73m2,,,Not Started,,,Currently reported only as result comment on CREA

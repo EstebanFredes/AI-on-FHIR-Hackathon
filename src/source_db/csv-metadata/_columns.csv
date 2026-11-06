@@ -1,0 +1,58 @@
+file,position,column,sql_name,inferred_type,sql_type,semantic_hint,date_format,nullable,null_count,distinct_count,unique,max_length,min,max,sample_values
+chargemaster_cdm.csv,1,CDM_NUMBER,cdm_number,code,varchar(9),,,False,0,27,True,9,,,300185027 | 300180048 | 300180061 | 300180076 | 300183036
+chargemaster_cdm.csv,2,CHARGE_DESCRIPTION,charge_description,string,varchar(31),,,False,0,27,True,31,,,CBC AUTOMATED | BASIC METABOLIC PANEL | LIPID PANEL | HEPATIC FUNCTION PANEL | HEMOGLOBIN A1C
+chargemaster_cdm.csv,3,DEPT,dept,string,varchar(3),,,False,0,3,False,3,,,LAB | RAD | ED
+chargemaster_cdm.csv,4,REV_CODE,rev_code,code,varchar(4),ub04_revenue,,False,0,11,False,4,,,0305 | 0301 | 0300 | 0306 | 0320
+chargemaster_cdm.csv,5,CPT_HCPCS,cpt_hcpcs,string,varchar(5),cpt_hcpcs,,True,1,25,False,5,,,85027 | 80048 | 80061 | 80076 | 83036
+chargemaster_cdm.csv,6,GROSS_CHARGE,gross_charge,decimal,"numeric(8,2)",,,False,0,27,True,7,0.00,2650.00,48.00 | 62.50 | 71.00 | 66.00 | 54.00
+chargemaster_cdm.csv,7,EFFECTIVE_DATE,effective_date,date,date,,YYYY-MM-DD,False,0,3,False,10,2016-01-01,2026-01-01,2026-01-01 | 2019-03-01 | 2016-01-01
+chargemaster_cdm.csv,8,STATUS,status,string,varchar(1),,,False,0,2,False,1,,,A | I
+department_cost_centers.csv,1,dept_code,dept_code,string,varchar(7),,,False,0,11,True,7,,,ED | ICU | MED4 | MED5 | FAMMED
+department_cost_centers.csv,2,department_name,department_name,string,varchar(29),,,False,0,11,True,29,,,Emergency Department | Medical Intensive Care Unit | 4 West Internal Medicine | 5 East Medicine (closed) | Family Medicine Clinic
+department_cost_centers.csv,3,cost_center,cost_center,string,varchar(7),cost_center,,False,0,11,True,7,,,CC-4100 | CC-4310 | CC-4420 | CC-4430 | CC-6105
+department_cost_centers.csv,4,gl_unit,gl_unit,string,varchar(6),,,False,0,2,False,6,,,SEGH01 | SEGH02
+department_cost_centers.csv,5,service_line,service_line,string,varchar(18),,,False,0,8,False,18,,,Emergency Services | Critical Care | Medicine | Primary Care | Women & Children
+department_cost_centers.csv,6,director,director,string,varchar(10),person_initials,,True,1,9,False,10,,,M. Lawson | R. Haddad | T. Bauer | A. Patel | C. Alvarez
+department_cost_centers.csv,7,active,active,boolean,boolean,,,False,0,2,False,1,,,Y | N
+ed_chief_complaints.csv,1,CC_CODE,cc_code,string,varchar(5),,,False,0,16,True,5,,,CC001 | CC002 | CC003 | CC004 | CC005
+ed_chief_complaints.csv,2,COMPLAINT,complaint,string,varchar(28),,,False,0,16,True,28,,,Chest pain | Shortness of breath | Abdominal pain | Fever | Fever - pediatric (<18y)
+ed_chief_complaints.csv,3,BODY_SYSTEM,body_system,string,varchar(15),,,False,0,13,False,15,,,Cardiovascular | Respiratory | GI | General | ENT
+ed_chief_complaints.csv,4,DEFAULT_ESI,default_esi,integer,integer,,,False,0,5,False,1,1,5,2 | 3 | 4 | 1 | 5
+ed_chief_complaints.csv,5,TRIAGE_PROTOCOL,triage_protocol,string,varchar(44),,,True,7,9,True,44,,,ACS pathway - ECG within 10 min | Peds fever protocol | Rapid strep standing order | Anticoagulant check - CT head if on anticoag | Canadian CT head rule
+ed_chief_complaints.csv,6,SEPSIS_SCREEN,sepsis_screen,boolean,boolean,,,False,0,2,False,1,,,N | Y
+ed_chief_complaints.csv,7,STROKE_ALERT,stroke_alert,boolean,boolean,,,False,0,2,False,1,,,N | Y
+fammed_dx_favorites.csv,1,Pick#,pick_no,string,varchar(5),,,False,0,27,True,5,,,FM001 | FM002 | FM003 | FM004 | FM005
+fammed_dx_favorites.csv,2,Clinician Term,clinician_term,string,varchar(35),,,False,0,27,True,35,,,Diabetes type 2 | Diabetes type 2 - uncontrolled | Prediabetes | Hypothyroid | Obesity
+fammed_dx_favorites.csv,3,ICD10,icd10,string,varchar(7),icd10cm,,True,1,26,True,7,,,E11.9 | E11.65 | R73.03 | E03.9 | E66.9
+fammed_dx_favorites.csv,4,Category,category,string,varchar(9),,,False,0,10,False,9,,,Endocrine | Cardio | Resp | GU | MSK
+fammed_dx_favorites.csv,5,Added By,added_by,string,varchar(8),person_initials,,False,0,1,False,8,,,A. Patel
+fammed_dx_favorites.csv,6,Last Reviewed,last_reviewed,year_month,varchar(7),,YYYY-MM,False,0,2,False,7,2019-04,2025-09,2025-09 | 2019-04
+fammed_dx_favorites.csv,7,Comment,comment,string,varchar(66),,,True,25,2,True,66,,,"OLD CODE - not billable since FY2022, claims rejected -> use FM041 | No code - clinician must pick from full search"
+lab_loinc_mapping_worksheet.csv,1,Local Code,local_code,string,varchar(7),,,False,0,21,True,7,,,WBC | RBC | HGB | HCT | MCV
+lab_loinc_mapping_worksheet.csv,2,Local Test Name,local_test_name,string,varchar(28),,,False,0,21,True,28,,,White blood cell count | Red blood cell count | Hemoglobin | Hematocrit | Mean corpuscular volume
+lab_loinc_mapping_worksheet.csv,3,Specimen,specimen,string,varchar(7),,,False,0,6,False,7,,,EDTA | SST | NAF | CIT | UR
+lab_loinc_mapping_worksheet.csv,4,Units,units,string,varchar(13),,,True,3,11,False,13,,,x10E3/uL | x10E6/uL | g/dL | % | fL
+lab_loinc_mapping_worksheet.csv,5,LOINC,loinc,string,varchar(7),loinc,,True,3,18,True,7,,,6690-2 | 789-8 | 718-7 | 4544-3 | 787-2
+lab_loinc_mapping_worksheet.csv,6,LOINC Long Name,loinc_long_name,string,varchar(78),,,True,3,18,True,78,,,Leukocytes [#/volume] in Blood by Automated count | Erythrocytes [#/volume] in Blood by Automated count | Hemoglobin [Mass/volume] in Blood | Hematocrit [Volume Fraction] of Blood by Automated count | MCV [Entitic mean volume] in Red Blood Cells by Automated count
+lab_loinc_mapping_worksheet.csv,7,Map Status,map_status,string,varchar(12),,,False,0,5,False,12,,,Mapped | Proposed | Needs Review | No Match | Not Started
+lab_loinc_mapping_worksheet.csv,8,Mapped By,mapped_by,string,varchar(10),person_initials,,True,3,3,False,10,,,D. Morales | H. Wong | K. Osei
+lab_loinc_mapping_worksheet.csv,9,Map Date,map_date,date,date,,MM/DD/YYYY,True,3,4,False,10,03/12/2019,10/28/2026,03/12/2019 | 02/01/2023 | 10/28/2026 | 05/02/2021
+lab_loinc_mapping_worksheet.csv,10,Notes,notes,string,varchar(68),,,True,11,10,True,68,,,Replaced conventional cTnI (old code TNI) | Waiting on ref lab to confirm method (LC-MS/MS vs immunoassay) | New test go-live Dec 2026 | Vendor insert says immunoassay - consider 20567-4 (method-specific)? | Sepsis committee request
+legacy_lis_code_conversion_2019.csv,1,OLD_LIS_CODE,old_lis_code,code,varchar(4),,,False,0,15,True,4,,,1010 | 1011 | 2001 | 2002 | 2050
+legacy_lis_code_conversion_2019.csv,2,OLD_NAME,old_name,string,varchar(16),,,False,0,15,True,16,,,CBC W/O DIFF | CBC W/ AUTO DIFF | LYTES | CHEM7 | LIPID PROFILE
+legacy_lis_code_conversion_2019.csv,3,NEW_LIS_CODE,new_lis_code,string,varchar(7),,,True,1,11,False,7,,,CBC | BMP | LIPID | LDLC | HEPF
+legacy_lis_code_conversion_2019.csv,4,CONVERSION_RULE,conversion_rule,string,varchar(7),,,False,0,5,False,7,,,1:1 | PARTIAL | REVIEW | RETIRED | N:1
+legacy_lis_code_conversion_2019.csv,5,RESULTS_MIGRATED,results_migrated,boolean,boolean,,,False,0,2,False,1,,,Y | N
+legacy_lis_code_conversion_2019.csv,6,NOTES,notes,string,varchar(79),,,True,9,6,True,79,,,"Diff components not migrated | Old lytes panel had NA/K/CL/CO2 only, mapped into BMP components | Direct vs calculated LDL - NOT the same analyte; results not migrated | Method changed (immunoassay -> HPLC) 2019 | Conventional troponin I; replaced by TROPHS in 2023 (different reference range)"
+radiology_procedure_crosswalk.csv,1,RIS Code,ris_code,string,varchar(11),,,False,0,10,True,11,,,XRCH2V | XRCHPORT | CTHDWO | CTACHPE | CTAPW
+radiology_procedure_crosswalk.csv,2,Procedure Description,procedure_description,string,varchar(39),,,False,0,10,True,39,,,XR CHEST PA AND LATERAL | XR CHEST 1 VIEW PORTABLE | CT HEAD/BRAIN WITHOUT CONTRAST | CTA CHEST PULMONARY EMBOLISM PROTOCOL | CT ABDOMEN PELVIS WITH CONTRAST
+radiology_procedure_crosswalk.csv,3,Modality,modality,string,varchar(2),,,False,0,5,False,2,,,DX | CT | MR | US | MG
+radiology_procedure_crosswalk.csv,4,CPT,cpt,code,varchar(5),cpt_hcpcs,,False,0,9,False,5,,,71046 | 71045 | 70450 | 71275 | 74177
+radiology_procedure_crosswalk.csv,5,CPT Modifier,cpt_modifier,string,varchar(5),,,True,9,1,True,5,,,RT/LT
+radiology_procedure_crosswalk.csv,6,LOINC (current),loinc_current,string,varchar(7),loinc,,True,6,3,False,7,,,36643-5 | 30799-1 | 24606-6
+radiology_procedure_crosswalk.csv,7,LOINC (proposed),loinc_proposed,string,varchar(7),loinc,,True,3,7,True,7,,,36589-0 | 36266-5 | 36813-4 | 30691-0 | 30704-1
+radiology_procedure_crosswalk.csv,8,LOINC Display,loinc_display,string,varchar(35),,,True,1,9,True,35,,,XR Chest 2 Views | Portable XR Chest AP single view | CT Head WO contrast | CTA Chest vessels W contrast IV | CT Abdomen and Pelvis W contrast IV
+radiology_procedure_crosswalk.csv,9,CDM Charge Code,cdm_charge_code,code,varchar(9),,,False,0,10,True,9,,,320104611 | 320104603 | 350100450 | 350171275 | 350174177
+radiology_procedure_crosswalk.csv,10,Exam Duration (min),exam_duration_min,integer,integer,,,False,0,6,False,2,10,45,10 | 15 | 20 | 40 | 30
+radiology_procedure_crosswalk.csv,11,Prep Instructions,prep_instructions,string,varchar(60),,,False,0,7,False,60,,,None | Creatinine within 30 days if >60 yo or diabetic; 20G IV R AC | NPO 4h; oral contrast 90 min prior per protocol | MRI safety screening form | NPO 6h
+radiology_procedure_crosswalk.csv,12,Owner Comments,owner_comments,string,varchar(84),,,True,4,6,True,84,,,Need playbook review - most are AP | No PE-specific LOINC - closest generic | Laterality-specific codes exist (36510-6 right / 36508-0 left) - pick at order time? | No good LOINC found - ask RSNA playbook team | Current code is generic MG Breast Screening; proposed is tomo-specific

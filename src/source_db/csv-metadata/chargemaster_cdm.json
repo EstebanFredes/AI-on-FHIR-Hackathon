@@ -1,0 +1,242 @@
+{
+  "file": "chargemaster_cdm.csv",
+  "extracted_at": "2026-11-06T12:10:30+00:00",
+  "format": {
+    "encoding": "utf-8",
+    "delimiter": ",",
+    "line_ending": "LF",
+    "size_bytes": 1808
+  },
+  "row_count": 27,
+  "column_count": 8,
+  "ragged_rows": {},
+  "candidate_primary_key": "CDM_NUMBER",
+  "header_style": "UPPER_SNAKE",
+  "columns": [
+    {
+      "position": 1,
+      "name": "CDM_NUMBER",
+      "sql_name": "cdm_number",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 27,
+      "unique": true,
+      "min_length": 9,
+      "max_length": 9,
+      "inferred_type": "code",
+      "sql_type": "varchar(9)",
+      "note": "numeric-looking identifier kept as text",
+      "value_shapes": {
+        "9{9}": 27
+      },
+      "sample_values": [
+        "300185027",
+        "300180048",
+        "300180061",
+        "300180076",
+        "300183036"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 2,
+      "name": "CHARGE_DESCRIPTION",
+      "sql_name": "charge_description",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 27,
+      "unique": true,
+      "min_length": 3,
+      "max_length": 31,
+      "inferred_type": "string",
+      "sql_type": "varchar(31)",
+      "value_shapes": {
+        "AA A{5} A{5} 9": 2,
+        "AAA A{9}": 1,
+        "A{5} A{9} A{5}": 1,
+        "A{5} A{5}": 1,
+        "A{7} A{8} A{5}": 1
+      },
+      "sample_values": [
+        "CBC AUTOMATED",
+        "BASIC METABOLIC PANEL",
+        "LIPID PANEL",
+        "HEPATIC FUNCTION PANEL",
+        "HEMOGLOBIN A1C"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 3,
+      "name": "DEPT",
+      "sql_name": "dept",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 3,
+      "unique": false,
+      "min_length": 2,
+      "max_length": 3,
+      "inferred_type": "string",
+      "sql_type": "varchar(3)",
+      "value_shapes": {
+        "AAA": 25,
+        "AA": 2
+      },
+      "enum_values": {
+        "LAB": 13,
+        "RAD": 12,
+        "ED": 2
+      },
+      "sample_values": [
+        "LAB",
+        "RAD",
+        "ED"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 4,
+      "name": "REV_CODE",
+      "sql_name": "rev_code",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 11,
+      "unique": false,
+      "min_length": 4,
+      "max_length": 4,
+      "inferred_type": "code",
+      "sql_type": "varchar(4)",
+      "note": "numeric-looking identifier kept as text (leading zeros)",
+      "semantic_hint": "ub04_revenue",
+      "value_shapes": {
+        "9{4}": 27
+      },
+      "enum_values": {
+        "0301": 8,
+        "0350": 3,
+        "0403": 3,
+        "0300": 2,
+        "0306": 2,
+        "0320": 2,
+        "0402": 2,
+        "0450": 2,
+        "0305": 1,
+        "0636": 1,
+        "0610": 1
+      },
+      "sample_values": [
+        "0305",
+        "0301",
+        "0300",
+        "0306",
+        "0320"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 5,
+      "name": "CPT_HCPCS",
+      "sql_name": "cpt_hcpcs",
+      "null_count": 1,
+      "nullable": true,
+      "distinct_count": 25,
+      "unique": false,
+      "min_length": 5,
+      "max_length": 5,
+      "inferred_type": "string",
+      "sql_type": "varchar(5)",
+      "semantic_hint": "cpt_hcpcs",
+      "value_shapes": {
+        "9{5}": 25,
+        "A9{4}": 1
+      },
+      "sample_values": [
+        "85027",
+        "80048",
+        "80061",
+        "80076",
+        "83036"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 6,
+      "name": "GROSS_CHARGE",
+      "sql_name": "gross_charge",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 27,
+      "unique": true,
+      "min_length": 4,
+      "max_length": 7,
+      "inferred_type": "decimal",
+      "sql_type": "numeric(8,2)",
+      "min": "0.00",
+      "max": "2650.00",
+      "value_shapes": {
+        "99.99": 10,
+        "999.99": 9,
+        "9{4}.99": 6,
+        "9.99": 2
+      },
+      "sample_values": [
+        "48.00",
+        "62.50",
+        "71.00",
+        "66.00",
+        "54.00"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 7,
+      "name": "EFFECTIVE_DATE",
+      "sql_name": "effective_date",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 3,
+      "unique": false,
+      "min_length": 10,
+      "max_length": 10,
+      "inferred_type": "date",
+      "sql_type": "date",
+      "date_format": "YYYY-MM-DD",
+      "min": "2016-01-01",
+      "max": "2026-01-01",
+      "value_shapes": {
+        "9{4}-99-99": 27
+      },
+      "sample_values": [
+        "2026-01-01",
+        "2019-03-01",
+        "2016-01-01"
+      ],
+      "has_untrimmed_whitespace": false
+    },
+    {
+      "position": 8,
+      "name": "STATUS",
+      "sql_name": "status",
+      "null_count": 0,
+      "nullable": false,
+      "distinct_count": 2,
+      "unique": false,
+      "min_length": 1,
+      "max_length": 1,
+      "inferred_type": "string",
+      "sql_type": "varchar(1)",
+      "value_shapes": {
+        "A": 27
+      },
+      "enum_values": {
+        "A": 26,
+        "I": 1
+      },
+      "sample_values": [
+        "A",
+        "I"
+      ],
+      "has_untrimmed_whitespace": false
+    }
+  ]
+}
